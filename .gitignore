@@ -43,4 +43,6 @@ out/
 *.iml
 out
 gen
+!component
+!server
 build

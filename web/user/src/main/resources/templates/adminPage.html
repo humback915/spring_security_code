@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin page</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<h1>Admin Page</h1>
+<ul>
+    <h2>user list</h2>
+    <li th:each="user : ${userList}" th:object="${user}" th:text="*{name}">
+        유저 이름
+    </li>
+</ul>
+<div>
+    <table>
+        <tr>
+            <th>아이디</th>
+            <th>이름</th>
+        </tr>
+        <tr th:each="user : ${userList}" th:object="${user}">
+            <td th:text="*{id}"></td>
+            <td th:text="*{name}"></td>
+        </tr>
+    </table>
+</div>
+<a href="/" th:href="@{/}">Back to Home Page</a>
+</body>
+</html>

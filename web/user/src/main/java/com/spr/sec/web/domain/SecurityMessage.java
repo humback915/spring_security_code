@@ -1,4 +1,4 @@
-package com.spr.sec.web.controller;
+package com.spr.sec.web.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

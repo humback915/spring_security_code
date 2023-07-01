@@ -1,6 +1,17 @@
 
+apply from: "../web-common.gradle"
+
 
 dependencies {
-    implementation("$boot:spring-boot-starter-web")
+    implementation("$boot:spring-boot-starter-data-jpa")
+
+    runtimeOnly('com.h2database:h2')
+
+    compileOnly project(":web-user")
+    compileOnly project(":component-user")
+    runtimeOnly project(":web-user")
+    runtimeOnly project(":component-user")
+    testCompileOnly project(":web-user")
+    testCompileOnly project(":component-user")
 }
 

@@ -1,10 +1,13 @@
 server:
-  port: 9051
+  port: 9052
+  servlet:
+    session:
+      timeout: 60s
 
 spring:
   devtools:
     livereload:
-        enabled: true
+      enabled: true
     restart:
       enabled: true
 
